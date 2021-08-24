@@ -1,13 +1,15 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import UserForm from './UserForm';
+import Products from './Products';
 
 function App() {
+
   return (
     <div>
-        <UserForm />
+        <Products />   
     </div>
   );
 }
+
 export default App;
