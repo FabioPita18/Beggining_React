@@ -1,30 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Rating from './Rating';
 import { Media } from 'react-bootstrap';
 
+class Product extends Component {
 
-const Product = (props) => {
+  constructor(props){
+    super(props);    
+  }
+
+  render() { 
     return (
-      <div> 
-       <Media>
+      <div>                
+        <Media>
             <img 
                 width={64} 
                 height={64} 
                 className="mr-3"
-                src={props.data.imageUrl} 
+                src={this.props.data.imageUrl} 
                 alt="Image"
             />
-          <Media.Body>
-            <h5>{props.data.productName}</h5>
-            { props.data.releasedDate }
-            <Rating 
-                rating={props.data.rating} numOfReviews={props.data.numOfReviews}
-            />
-            <p>{props.data.description}</p>
-          </Media.Body>
+            <Media.Body>
+                <h5>{this.props.data.productName}</h5>
+                { this.props.data.releasedDate }
+                <Rating rating={this.props.data.rating} numOfReviews={this.props.data.numOfReviews}/>
+                <p>{this.props.data.description}</p>
+            </Media.Body>
         </Media>                                                                                                                                   
       </div>
     );
   }
+}
 
 export default Product;

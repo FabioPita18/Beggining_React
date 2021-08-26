@@ -1,13 +1,15 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import React, { Component } from 'react';
 import UserForm from './UserForm';
 
-function App() {
-  return (
-    <div>
-        <UserForm />
-    </div>
-  );
+class App extends Component {
+  render() {        
+    return (
+      <div>
+        <UserForm />        
+                
+      </div>
+    );
+  }
 }
+
 export default App;
